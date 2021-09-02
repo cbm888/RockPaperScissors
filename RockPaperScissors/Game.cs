@@ -135,13 +135,19 @@ namespace RockPaperScissors
         {
             if (rounds > maxRounds)
             {
-                Console.WriteLine("That's it! Time to stop and take a break!");
+                Console.WriteLine("Would you like to play again?");
+                string userInput = Console.ReadLine();
+                if (userInput == "Yes")
+                {
+                    PlayTheGame();
+                }
+                else
+                {
+                    Console.WriteLine( "Thanks for playing!");
+                }
 
             }
-            else
-            {
-                PlayTheGame();
-            }
+            
            
 
         }
